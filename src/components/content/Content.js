@@ -7,7 +7,7 @@ import Recovered from './Recovered'
 const Content = () => {
     return (
         <div className="cards_container">
-            <div className="card">
+            <div className="cards">
                 <Infected />
                 <Recovered />
                 <Deaths />
