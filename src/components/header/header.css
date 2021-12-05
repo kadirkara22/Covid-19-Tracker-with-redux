@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0;
+}
+.headerImage {
+  margin-bottom: 15px;
+}
+.headerText1 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.headerText2 {
+  font-style: italic;
+  font-size: 17px;
+}
