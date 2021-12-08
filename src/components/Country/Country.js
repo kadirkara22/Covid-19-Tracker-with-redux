@@ -1,9 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { showCountry } from '../../redux/countrySlice';
 import "./country.css"
 const Country = () => {
-    const [country, setCountry] = useState();
-    const [loading, setLoading] = useState(true);
+    const [country, setCountry] = useState([]);
+
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         axios(`https://covid19.mathdro.id/api/countries`)
@@ -12,18 +16,23 @@ const Country = () => {
 
     }, [])
 
-    console.log(country)
+
+
+    const handleChange = (countryName) => {
+        dispatch(showCountry(countryName))
+    }
+
     return (
         <div className="country_picker country_picker2">
             <div className="countryInput countryBase countryUnderline">
-                <select className="select">
-
-                    {/*    {
-                        country.map(item => (
-                            <option value={item.name}></option>
+                <select className="select" onChange={(e) => handleChange(e.target.value)}>
+                    <option>Global</option>
+                    {
+                        country.map((item, i) => (
+                            <option key={i} value={item.name}>{item.name}</option>
                         ))
 
-                    } */}
+                    }
 
 
                 </select>
