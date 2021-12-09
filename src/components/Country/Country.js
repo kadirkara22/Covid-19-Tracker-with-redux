@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { showCountry } from '../../redux/countrySlice';
+import { getCountryName } from '../../redux/countrySlice';
 import "./country.css"
 const Country = () => {
     const [country, setCountry] = useState([]);
@@ -19,7 +19,7 @@ const Country = () => {
 
 
     const handleChange = (countryName) => {
-        dispatch(showCountry(countryName))
+        dispatch(getCountryName(countryName))
     }
 
     return (
