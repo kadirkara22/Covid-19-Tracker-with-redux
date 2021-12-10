@@ -13,8 +13,8 @@ const Infected = ({ confirmed, dateTarih, saat, countryName }) => {
         fetch(`https://covid19.mathdro.id/api/countries/${countryName}`)
             .then((res) => res.json())
             .then((data) => setInfected(data.confirmed))
-    }, [countryName])
 
+    }, [countryName])
 
 
 

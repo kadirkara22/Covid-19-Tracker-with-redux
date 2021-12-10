@@ -12,6 +12,7 @@ const Content = () => {
 
     const [loading, setLoading] = useState(true);
 
+
     const confirmed = useSelector(state => state.covid.confirmed)
     const death = useSelector(state => state.covid.death)
     const recovered = useSelector(state => state.covid.recovered)

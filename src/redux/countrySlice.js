@@ -28,12 +28,8 @@ export const countrySlice = createSlice({
             state.country = action.payload !== "Global" && action.payload
         },
         showCountry: (state, action) => {
-            const data2 = action.payload
-            state.confirmed2 = data2
-
-
-
-
+            /* const data2 = action.payload
+            state.confirmed2 = data2 */
         }
     }
 })

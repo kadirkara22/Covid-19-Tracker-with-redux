@@ -7,7 +7,12 @@ const Deaths = ({ death, dateTarih, saat, countryName }) => {
         fetch(`https://covid19.mathdro.id/api/countries/${countryName}`)
             .then((res) => res.json())
             .then((data) => setDeath(data.deaths))
+
+
     }, [countryName])
+
+
+
     return (
         <div className="Deaths_card">
             <div className="Deaths">
