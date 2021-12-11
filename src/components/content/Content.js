@@ -33,7 +33,13 @@ const Content = () => {
     const dateTarih = date.toDateString();
     const saat = date.toLocaleTimeString()
 
+
     const active = Number(confirmed) - Number(death)
+
+
+
+
+
 
 
     return (

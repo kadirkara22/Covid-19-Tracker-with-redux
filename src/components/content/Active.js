@@ -1,8 +1,20 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import "./content.css"
-const Active = ({ active, dateTarih, saat, countryName }) => {
+const Active = ({ active, dateTarih, saat }) => {
+    const countryName = useSelector(state => state.covid.country2)
+    const [infected, setInfected] = useState();
+    const [death, setDeath] = useState();
 
+    axios.get(`https://covid19.mathdro.id/api/countries/${countryName}`)
+        .then(res => {
+            console.log(res.data.confirmed);
+            setInfected(res.data.confirmed.value);
+            setDeath(res.data.deaths.value)
+        })
+
+    const activeCountry = infected - death;
 
     return (
         <div className="Active_card">
@@ -11,7 +23,7 @@ const Active = ({ active, dateTarih, saat, countryName }) => {
                 <h5 className="count">
                     <span>
                         {
-                            active
+                            countryName !== null && countryName !== "Global" ? activeCountry : active
                         }
                     </span>
                 </h5>
