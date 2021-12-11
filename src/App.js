@@ -1,8 +1,7 @@
 
 import './App.css';
 import Content from './components/content/Content';
-import Country from './components/country';
-
+import Country from './components/country/Country';
 import Graphic from './components/graphics';
 import Header from './components/header';
 
