@@ -1,7 +1,7 @@
 
 import './App.css';
 import Content from './components/content/Content';
-import Country from './components/country/Country';
+import Countries from './components/country/Countries';
 import Graphic from './components/graphics';
 import Header from './components/header';
 
@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <Content />
-      <Country />
+      <Countries />
       <Graphic />
 
     </div>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { getCountryName } from '../../redux/countrySlice';
 import "./country.css"
-const Country = () => {
+const Countries = () => {
     const [country, setCountry] = useState([]);
 
 
@@ -45,4 +45,4 @@ const Country = () => {
     )
 }
 
-export default Country
+export default Countries
