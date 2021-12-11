@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-import { useEffect } from "react";
-import { ContextProvider } from "react-is";
+
 
 export const countrySlice = createSlice({
     name: "country",
@@ -9,6 +7,7 @@ export const countrySlice = createSlice({
         items: [],
         global: [],
         country: [],
+        country2: null,
         confirmed: null,
         recovered: null,
         death: null,
@@ -26,6 +25,8 @@ export const countrySlice = createSlice({
         },
         getCountryName: (state, action) => {
             state.country = action.payload !== "Global" && action.payload
+            state.country2 = action.payload
+
         },
         showCountry: (state, action) => {
             /* const data2 = action.payload
