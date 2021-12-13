@@ -28,7 +28,7 @@ export const countrySlice = createSlice({
             state.country2 = action.payload
 
         },
-        showCountry: (state, action) => {
+        showInfected: (state, action) => {
             /* const data2 = action.payload
             state.confirmed2 = data2 */
         }

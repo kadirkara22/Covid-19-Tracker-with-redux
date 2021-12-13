@@ -55,6 +55,7 @@ const CountryGraphhic = () => {
                     width={1150}
                     options={{
                         responsive: true,
+                        legend: { display: false },
                         title: { text: `Current state in ${countryName}`, display: true },
                         label: { display: false },
                         maintainAspectRatio: false,
